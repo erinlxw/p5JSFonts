@@ -1,7 +1,7 @@
 let font, fontBold, fontHandjet;
 let bold = false;
 let switcher = false;
-let currentFont = "Roboto-Regular";
+let currentFont = "Handjet";
 
 function preload() {
   fontHandjet = loadFont('assets/fonts/Handjet/static/Handjet-Black.ttf');
