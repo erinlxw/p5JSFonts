@@ -1,12 +1,12 @@
-let font, fontBold, fontHandjet;
+let font, fontBold, fontHandjet, fontQuicksand;
 let bold = false;
 let switcher = false;
-let currentFont = "Handjet";
+let currentFont = "Quicksand";
 
 function preload() {
-  fontHandjet = loadFont('assets/fonts/Handjet/static/Handjet-Black.ttf');
+  fontHandjet = loadFont('assets/fonts/Handjet/static/Handjet-Bold.ttf');
+  fontQuicksand = loadFont('assets/fonts/Quicksand/static/Quicksand-Bold.ttf');
   font = loadFont('assets/fonts/Inconsolata/static/Inconsolata-Black.ttf');
-
   fontBold = loadFont('assets/fonts/Inconsolata/static/Inconsolata-ExtraBold.ttf');
   fontRoboto = loadFont('assets/fonts/Roboto/Roboto-Regular.ttf');
 }
@@ -18,7 +18,7 @@ function setup() {
 }
 
 function mousePressed(fxn) {
-  bold = !(bold); 
+  bold = !(bold);
   switcher = true;
 }
 
@@ -26,10 +26,14 @@ function draw() {
   clear();
   if (switcher === true) {
     if (bold === false) {
-      textFont(fontHandjet);
+      textFont(fontQuicksand);
+      // textFont(fontHandjet);
       // textFont(fontRoboto);
-      console.log("Handjet");
-      currentFont ="Handjet";
+      //fontHandjet
+      console.log("Quicksand");
+      currentFont ="Quicksand";
+      // console.log("Handjet");
+      // currentFont ="Handjet";
       // console.log("Roboto-Regular");
       // currentFont ="Roboto-Regular";
 
